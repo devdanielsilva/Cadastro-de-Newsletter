@@ -4,6 +4,7 @@
   margin: 0;
 }
 
+/*Botão de abrir o modal*/
 .btn {
   background-color: #00bfff;
   color: #fff;
@@ -28,7 +29,7 @@
   position: relative;
   top: 0;
   left: 0;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   background-color: #00000080;
@@ -48,6 +49,7 @@
   border-radius: 20px;
 }
 
+/*Botão de fechar o modal*/
 .fechar {
   position: absolute;
   top: -10px;
@@ -60,4 +62,8 @@
   color: #fff;
   font-size: 20px;
   cursor: pointer;
+}
+
+.janela-modal.abrir {
+  display: flex;
 }
