@@ -1,10 +1,11 @@
+/*Seletor de configuração geral da página.*/
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-/*Botão de abrir o modal*/
+/* Seletor do Botão de abrir o modal*/
 .btn {
   background-color: #00bfff;
   color: #fff;
@@ -21,10 +22,12 @@
   z-index: 999;
 }
 
+/*Seletor da pseudo-classe Hover CSS*/
 .btn:hover {
   background-color: #6302ff;
 }
 
+/*Seletor da janela modal*/
 .janela-modal {
   position: relative;
   top: 0;
@@ -39,6 +42,7 @@
   z-index: 999;
 }
 
+/*Seletor do modal com o texto.*/
 .modal {
   width: 60%;
   min-width: 450px;
@@ -49,7 +53,7 @@
   border-radius: 20px;
 }
 
-/*Botão de fechar o modal*/
+/*Seletor do Botão de fechar o modal*/
 .fechar {
   position: absolute;
   top: -10px;
@@ -64,6 +68,24 @@
   cursor: pointer;
 }
 
+/*Seletor da janela modal, quando houver o click no botão.*/
 .janela-modal.abrir {
   display: flex;
+}
+
+/*Seletor de configuração do modal, quando clicar no botão e o modal for aberto.*/
+@keyframes abrirmodal {
+  from {
+    opacity: 0;
+    transform: translate3d(-20px, 0px, 0px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/*Seletor de configuração da animação do modal, quando clicar no botão.*/
+.abrir .modal {
+  animation: abrirmodal 0.3s;
 }
